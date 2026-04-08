@@ -1,6 +1,8 @@
--- Multicam Mouse Helper for REAPER
--- Only inserts envelope points for 'Active Angle'.
--- Handles aspect ratio awareness (16:9) to map clicks only within the centered video grid.
+-- @description Multicam editor
+-- @author atmosfar
+-- @version 0.1
+-- @about
+--   A multicam editor script which allows you to select the desired active angle on the multicam preview grid.
 
 reaper.gmem_attach("multicam")
 
