@@ -3,6 +3,9 @@
 -- @version 0.1
 -- @about
 --   A multicam editor script which allows you to select the desired active angle on the multicam preview grid.
+-- @links
+--  Forum Thread https://forums.cockos.com/showthread.php?t=307612
+--  GitHub repository https://github.com/atmosfar/reaper_scripts/tree/master/multicam
 
 reaper.gmem_attach("multicam")
 
@@ -11,8 +14,8 @@ local VIDEO_WINDOW_TITLE = reaper.LocalizeString('Video Window', 'video2_DLG_102
 local TARGET_ASPECT = 16 / 9
 local _, video_width = reaper.get_config_var_string("projvidw")
 local _, video_height = reaper.get_config_var_string("projvidh")
-if (video_width > 0 and video_height > 0) then
-  TARGET_ASPECT =  video_width / video_height
+if (tonumber(video_width) > 0 and tonumber(video_height) > 0) then
+  TARGET_ASPECT =  tonumber(video_width) / tonumber(video_height)
 end
 
 local function IsVideoWindowValid(hwnd)
