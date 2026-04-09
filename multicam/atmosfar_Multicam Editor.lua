@@ -1,6 +1,6 @@
--- @description Multicam editor
+-- @description atmosfar - Multicam editor
 -- @author atmosfar
--- @version 0.32
+-- @version 0.33
 -- @about
 --   A multicam editor script which allows you to select the desired active angle on the multicam preview grid.
 -- @links
@@ -9,6 +9,7 @@
 -- @provides
 --  [data] multicam_video_processor.video_code > atmosfar_multicam/
 -- @changelog
+--  v0.33 - Update description
 --  v0.32 - Add guard for mouse clicks during Program Output display mode
 --  v0.31 - Remove Active Angle from TCP param controls and revert env automation mode to default.
 --  v0.3 - Added JS API function check, and second run check, TCP param controls.
