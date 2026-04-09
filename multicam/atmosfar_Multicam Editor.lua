@@ -1,6 +1,6 @@
 -- @description Multicam editor
 -- @author atmosfar
--- @version 0.21
+-- @version 0.32
 -- @about
 --   A multicam editor script which allows you to select the desired active angle on the multicam preview grid.
 -- @links
