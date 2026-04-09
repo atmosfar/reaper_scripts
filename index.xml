@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="atmosfar - Reaper Scripts" commit="eb76590558f3a297cd7c532822f9dc6871b25870">
+<index version="1" name="atmosfar - Reaper Scripts" commit="553fd88e0020de11c14016e1895192601e3171c5">
   <category name="multicam">
     <reapack name="multicam_editor.lua" type="script" desc="Multicam editor">
       <metadata>
@@ -15,6 +15,9 @@
       </metadata>
       <version name="0.1" author="atmosfar" time="2026-04-08T23:50:00Z">
         <source main="main">https://github.com/atmosfar/reaper_scripts/raw/813dba4949306dce127692b178afeb1b567d62c1/multicam/multicam_editor.lua</source>
+      </version>
+      <version name="0.11" author="atmosfar" time="2026-04-09T00:06:25Z">
+        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/553fd88e0020de11c14016e1895192601e3171c5/multicam/multicam_editor.lua</source>
       </version>
     </reapack>
   </category>
