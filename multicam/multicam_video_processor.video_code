@@ -1,0 +1,116 @@
+// Multicam Grid Layout
+// Scans tracks and tiles them into a grid.
+// Mode 0: Grid + Interaction (Editing)
+// Mode 1: Active Angle Only (Rendering)
+
+//@param1:gap 'Grid Gap' 0 0 0.05 0.01
+//@param2:active_angle 'Active Angle' 1 1 16 8 1
+//@param3:mode 'Display Mode' 0 0 1 0 1
+//@gmem=multicam
+
+// Clear Canvas
+gfx_set(0, 0, 0, 1);
+gfx_fillrect(0, 0, project_w, project_h);
+
+// Determine active track index (0-based)
+active_idx = floor(active_angle + 0.5) - 1;
+
+mode == 0 ? (
+  // --- MODE 0: GRID VIEW ---
+  
+  // Count active video tracks
+  num_found = 0;
+  track_idx = 0; 
+  max_search = 16; 
+
+  loop(max_search,
+    img = input_track(track_idx);
+    input_info(img, w, h) && w > 0 ? (
+      num_found += 1;
+    );
+    track_idx += 1;
+  );
+
+
+  // Record actual number of video tracks to GMEM (Lua will use this)
+  gmem[0] = num_found;
+
+
+  // Calculate Grid Dimensions and Draw
+  num_found > 0 ? (
+    cols = ceil(sqrt(num_found));
+    rows = ceil(num_found / cols);
+    
+    cell_w = project_w / cols;
+    cell_h = project_h / rows;
+    
+    current_video = 0;
+    t_idx = 0;
+    
+    while(t_idx < max_search && current_video < num_found) (
+      img = input_track(t_idx);
+      
+      input_info(img, w, h) && w > 0 ? (
+        col_pos = current_video % cols;
+        row_pos = floor(current_video / cols);
+        
+        x = col_pos * cell_w;
+        y = row_pos * cell_h;
+        
+        // Apply gap/margin logic
+        gx = x + (gap * project_w);
+        gy = y + (gap * project_h);
+        gw = cell_w - (gap * 2 * project_w);
+        gh = cell_h - (gap * 2 * project_h);
+        
+        // Draw the frame
+        gfx_set(0,0,0,1); 
+        gfx_fillrect(gx, gy, gw, gh);
+        gfx_a = 1; // opacity removed, using 1
+        gfx_blit(img, 1, gx, gy, gw, gh);
+        
+        // Draw Label
+        sprintf(#label, "Cam %d", t_idx + 1);
+        gfx_str_measure(#label, lw, lh);
+        gfx_set(0, 0, 0, 0.6);
+        gfx_fillrect(gx, gy, lw + 10, lh + 10);
+        
+        // Highlight if active (1-based check)
+        current_video == active_idx ? (
+          gfx_set(0, 1, 0, 1); // Green label
+          
+          border_t = 6;
+          gfx_set(0, 1, 0, 1); // Thick Green border
+          gfx_fillrect(gx, gy, gw, border_t); // Top
+          gfx_fillrect(gx, gy + gh - border_t, gw, border_t); // Bottom
+          gfx_fillrect(gx, gy, border_t, gh); // Left
+          gfx_fillrect(gx + gw - border_t, gy, border_t, gh); // Right
+        ) : (
+          gfx_set(1, 1, 1, 1); // White label
+        );
+        
+        gfx_str_draw(#label, gx + 5, gy + 5);
+
+        current_video += 1;
+      );
+      t_idx += 1;
+    );
+  );
+
+  num_found == 0 ? (
+    gfx_set(1, 1, 1, 1);
+    gfx_str_draw("No video tracks found.", 20, 20);
+  );
+
+  // Force UI refresh for interaction
+  ui_get_state(-1, dx, dy, 0.016);
+
+) : (
+  // --- MODE 1: ACTIVE ANGLE ONLY ---
+  
+  img = input_track(active_idx);
+  input_info(img, w, h) && w > 0 ? (
+    gfx_a = 1; // opacity removed
+    gfx_blit(img, 1, 0, 0, project_w, project_h);
+  );
+);
