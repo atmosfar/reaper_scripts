@@ -17,7 +17,7 @@ active_idx = floor(active_angle + 0.5) - 1;
 
 mode == 0 ? (
   // --- MODE 0: GRID VIEW ---
-  
+  gmem[1] = 0;
   // Count active video tracks
   num_found = 0;
   track_idx = 0; 
