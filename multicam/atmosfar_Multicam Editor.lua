@@ -245,6 +245,12 @@ local function Main()
 		return
 	end
 
+  local display_mode = reaper.gmem_read(1)
+  if display_mode == 1 then
+    -- Video processor is in Program Output mode rather than Grid
+    reaper.defer(Main)
+  end
+
 	local _, left, top, right, bottom = reaper.JS_Window_GetRect(wnd)
 	local win_w = math.abs(right - left)
 	local win_h = math.abs(bottom - top)

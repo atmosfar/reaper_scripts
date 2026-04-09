@@ -107,7 +107,7 @@ mode == 0 ? (
 
 ) : (
   // --- MODE 1: ACTIVE ANGLE ONLY ---
-  
+  gmem[1] = 1;
   img = input_track(active_idx);
   input_info(img, w, h) && w > 0 ? (
     gfx_a = 1; // opacity removed
