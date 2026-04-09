@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="atmosfar - Reaper Scripts" commit="a3b4449005313e536a0b5a0d19f12843cebff1b0">
+<index version="1" name="atmosfar - Reaper Scripts" commit="042e0e323b614943e4cecf4e542d28a3abafbc90">
   <category name="multicam">
     <reapack name="atmosfar_Multicam Editor.lua" type="script" desc="Multicam editor">
       <metadata>
@@ -17,25 +17,6 @@
         <changelog><![CDATA[v0.2 - Added SetupMulticamTrack() and SetupVideoProcessor() to automate project structuring. ]]></changelog>
         <source main="main">https://github.com/atmosfar/reaper_scripts/raw/a3b4449005313e536a0b5a0d19f12843cebff1b0/multicam/atmosfar_Multicam%20Editor.lua</source>
         <source type="data" file="atmosfar_multicam/multicam_video_processor.video_code">https://github.com/atmosfar/reaper_scripts/raw/a3b4449005313e536a0b5a0d19f12843cebff1b0/multicam/multicam_video_processor.video_code</source>
-      </version>
-    </reapack>
-    <reapack name="multicam_editor.lua" type="script" desc="Multicam editor">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 A multicam editor script which allows you to select the desired active angle on the multicam preview grid.\par}
-}
-]]></description>
-        <link rel="website" href="https://forums.cockos.com/showthread.php?t=307612">Forum Thread</link>
-        <link rel="website" href="https://github.com/atmosfar/reaper_scripts/tree/master/multicam">GitHub repository</link>
-      </metadata>
-      <version name="0.1" author="atmosfar" time="2026-04-08T23:50:00Z">
-        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/813dba4949306dce127692b178afeb1b567d62c1/multicam/multicam_editor.lua</source>
-      </version>
-      <version name="0.11" author="atmosfar" time="2026-04-09T00:06:25Z">
-        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/553fd88e0020de11c14016e1895192601e3171c5/multicam/multicam_editor.lua</source>
       </version>
     </reapack>
   </category>
