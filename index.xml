@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="atmosfar - Reaper Scripts" commit="93321a49fe8cf18b3cb4be437ead84f752ea3424">
+<index version="1" name="atmosfar - Reaper Scripts" commit="8f03053584852dcbdc42856a63e46444724ca43d">
   <category name="multicam">
     <reapack name="atmosfar_Multicam Editor.lua" type="script" desc="Multicam editor">
       <metadata>
@@ -23,6 +23,14 @@
 v0.2 - Added SetupMulticamTrack() and SetupVideoProcessor() to automate project structuring.]]></changelog>
         <source main="main">https://github.com/atmosfar/reaper_scripts/raw/93321a49fe8cf18b3cb4be437ead84f752ea3424/multicam/atmosfar_Multicam%20Editor.lua</source>
         <source type="data" file="atmosfar_multicam/multicam_video_processor.video_code">https://github.com/atmosfar/reaper_scripts/raw/93321a49fe8cf18b3cb4be437ead84f752ea3424/multicam/multicam_video_processor.video_code</source>
+      </version>
+      <version name="0.32" author="atmosfar" time="2026-04-09T14:26:06Z">
+        <changelog><![CDATA[v0.32 - Add guard for mouse clicks during Program Output display mode
+v0.31 - Remove Active Angle from TCP param controls and revert env automation mode to default.
+v0.3 - Added JS API function check, and second run check, TCP param controls.
+v0.2 - Added SetupMulticamTrack() and SetupVideoProcessor() to automate project structuring.]]></changelog>
+        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/8f03053584852dcbdc42856a63e46444724ca43d/multicam/atmosfar_Multicam%20Editor.lua</source>
+        <source type="data" file="atmosfar_multicam/multicam_video_processor.video_code">https://github.com/atmosfar/reaper_scripts/raw/8f03053584852dcbdc42856a63e46444724ca43d/multicam/multicam_video_processor.video_code</source>
       </version>
     </reapack>
   </category>
