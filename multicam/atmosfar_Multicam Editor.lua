@@ -9,6 +9,7 @@
 -- @provides
 --  [data] multicam_video_processor.video_code > atmosfar_multicam/
 -- @changelog
+--  v0.31 - Remove Active Angle from TCP param controls and revert env automation mode to default.
 --  v0.3 - Added JS API function check, and second run check, TCP param controls.
 --  v0.2 - Added SetupMulticamTrack() and SetupVideoProcessor() to automate project structuring.
 
@@ -71,7 +72,7 @@ function SetupMulticamTrack()
 	-- Rename the new track
 	reaper.GetSetMediaTrackInfo_String(new_track, "P_NAME", "Multicam", true)
 	-- Set the track param envelope automation mode to "Touch"
-	reaper.SetMediaTrackInfo_Value(new_track, "I_AUTOMODE", 2)
+	-- reaper.SetMediaTrackInfo_Value(new_track, "I_AUTOMODE", 2)
 
 	local selected_count = reaper.CountSelectedTracks(proj)
 	-- Move selected tracks into multicam folder
@@ -100,7 +101,7 @@ local function SetupVideoProcessor(tr)
 				-- Add track TCP controls if SWS is installed
 				if type(reaper.SNM_AddTCPFXParm) == "function" then
 					reaper.SNM_AddTCPFXParm(track, 0, 2) -- Display Mode
-					reaper.SNM_AddTCPFXParm(track, 0, 1) -- Active Angle
+					-- reaper.SNM_AddTCPFXParm(track, 0, 1) -- Active Angle
 				end
 				return true
 			end
