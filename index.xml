@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="atmosfar - Reaper Scripts" commit="8f03053584852dcbdc42856a63e46444724ca43d">
+<index version="1" name="atmosfar - Reaper Scripts" commit="20623b8e6d023bc5e5c997890a77bf53e12e4038">
   <category name="multicam">
-    <reapack name="atmosfar_Multicam Editor.lua" type="script" desc="Multicam editor">
+    <reapack name="atmosfar_Multicam Editor.lua" type="script" desc="atmosfar - Multicam editor">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -31,6 +31,15 @@ v0.3 - Added JS API function check, and second run check, TCP param controls.
 v0.2 - Added SetupMulticamTrack() and SetupVideoProcessor() to automate project structuring.]]></changelog>
         <source main="main">https://github.com/atmosfar/reaper_scripts/raw/8f03053584852dcbdc42856a63e46444724ca43d/multicam/atmosfar_Multicam%20Editor.lua</source>
         <source type="data" file="atmosfar_multicam/multicam_video_processor.video_code">https://github.com/atmosfar/reaper_scripts/raw/8f03053584852dcbdc42856a63e46444724ca43d/multicam/multicam_video_processor.video_code</source>
+      </version>
+      <version name="0.33" author="atmosfar" time="2026-04-09T14:59:03Z">
+        <changelog><![CDATA[v0.33 - Update description
+v0.32 - Add guard for mouse clicks during Program Output display mode
+v0.31 - Remove Active Angle from TCP param controls and revert env automation mode to default.
+v0.3 - Added JS API function check, and second run check, TCP param controls.
+v0.2 - Added SetupMulticamTrack() and SetupVideoProcessor() to automate project structuring.]]></changelog>
+        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/20623b8e6d023bc5e5c997890a77bf53e12e4038/multicam/atmosfar_Multicam%20Editor.lua</source>
+        <source type="data" file="atmosfar_multicam/multicam_video_processor.video_code">https://github.com/atmosfar/reaper_scripts/raw/20623b8e6d023bc5e5c997890a77bf53e12e4038/multicam/multicam_video_processor.video_code</source>
       </version>
     </reapack>
   </category>
