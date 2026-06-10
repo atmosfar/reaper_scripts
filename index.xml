@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="atmosfar - Reaper Scripts" commit="20623b8e6d023bc5e5c997890a77bf53e12e4038">
+<index version="1" name="atmosfar - Reaper Scripts" commit="e512b19360b052aceac3de39919c00f54ce01d93">
   <category name="multicam">
     <reapack name="atmosfar_Multicam Editor.lua" type="script" desc="atmosfar - Multicam editor">
       <metadata>
@@ -40,6 +40,25 @@ v0.3 - Added JS API function check, and second run check, TCP param controls.
 v0.2 - Added SetupMulticamTrack() and SetupVideoProcessor() to automate project structuring.]]></changelog>
         <source main="main">https://github.com/atmosfar/reaper_scripts/raw/20623b8e6d023bc5e5c997890a77bf53e12e4038/multicam/atmosfar_Multicam%20Editor.lua</source>
         <source type="data" file="atmosfar_multicam/multicam_video_processor.video_code">https://github.com/atmosfar/reaper_scripts/raw/20623b8e6d023bc5e5c997890a77bf53e12e4038/multicam/multicam_video_processor.video_code</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="remux_video">
+    <reapack name="atmosfar_Render Audio and Remux Video.lua" type="script" desc="atmosfar - Render audio and remux video">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 A script which renders the current project as WAV, and remuxes it into a new video file with the video stream from the first video item found in the project, without re-encoding.\par}
+}
+]]></description>
+        <link rel="website" href="https://forums.cockos.com/showthread.php?t=307612">Forum Thread</link>
+        <link rel="website" href="https://github.com/atmosfar/reaper_scripts/tree/master/ffmpeg_remux">GitHub repository</link>
+      </metadata>
+      <version name="1.0" author="atmosfar" time="2026-06-10T17:07:35Z">
+        <changelog><![CDATA[v1.0 - Initial release]]></changelog>
+        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/e512b19360b052aceac3de39919c00f54ce01d93/remux_video/atmosfar_Render%20Audio%20and%20Remux%20Video.lua</source>
       </version>
     </reapack>
   </category>
