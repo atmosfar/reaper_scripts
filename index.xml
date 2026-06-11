@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="atmosfar - Reaper Scripts" commit="e512b19360b052aceac3de39919c00f54ce01d93">
-  <category name="multicam">
+<index version="1" name="atmosfar - Reaper Scripts" commit="75bd16b82e463c4053656d2d6006d16673c7a1fb">
+  <category name="Video">
     <reapack name="atmosfar_Multicam Editor.lua" type="script" desc="atmosfar - Multicam editor">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
@@ -13,37 +13,16 @@
         <link rel="website" href="https://forums.cockos.com/showthread.php?t=307612">Forum Thread</link>
         <link rel="website" href="https://github.com/atmosfar/reaper_scripts/tree/master/multicam">GitHub repository</link>
       </metadata>
-      <version name="0.2" author="atmosfar" time="2026-04-09T11:04:48Z">
-        <changelog><![CDATA[v0.2 - Added SetupMulticamTrack() and SetupVideoProcessor() to automate project structuring. ]]></changelog>
-        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/a3b4449005313e536a0b5a0d19f12843cebff1b0/multicam/atmosfar_Multicam%20Editor.lua</source>
-        <source type="data" file="atmosfar_multicam/multicam_video_processor.video_code">https://github.com/atmosfar/reaper_scripts/raw/a3b4449005313e536a0b5a0d19f12843cebff1b0/multicam/multicam_video_processor.video_code</source>
-      </version>
-      <version name="0.21" author="atmosfar" time="2026-04-09T13:35:16Z">
-        <changelog><![CDATA[v0.3 - Added JS API function check, and second run check, TCP param controls.
-v0.2 - Added SetupMulticamTrack() and SetupVideoProcessor() to automate project structuring.]]></changelog>
-        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/93321a49fe8cf18b3cb4be437ead84f752ea3424/multicam/atmosfar_Multicam%20Editor.lua</source>
-        <source type="data" file="atmosfar_multicam/multicam_video_processor.video_code">https://github.com/atmosfar/reaper_scripts/raw/93321a49fe8cf18b3cb4be437ead84f752ea3424/multicam/multicam_video_processor.video_code</source>
-      </version>
-      <version name="0.32" author="atmosfar" time="2026-04-09T14:26:06Z">
-        <changelog><![CDATA[v0.32 - Add guard for mouse clicks during Program Output display mode
-v0.31 - Remove Active Angle from TCP param controls and revert env automation mode to default.
-v0.3 - Added JS API function check, and second run check, TCP param controls.
-v0.2 - Added SetupMulticamTrack() and SetupVideoProcessor() to automate project structuring.]]></changelog>
-        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/8f03053584852dcbdc42856a63e46444724ca43d/multicam/atmosfar_Multicam%20Editor.lua</source>
-        <source type="data" file="atmosfar_multicam/multicam_video_processor.video_code">https://github.com/atmosfar/reaper_scripts/raw/8f03053584852dcbdc42856a63e46444724ca43d/multicam/multicam_video_processor.video_code</source>
-      </version>
-      <version name="0.33" author="atmosfar" time="2026-04-09T14:59:03Z">
+      <version name="0.33" author="atmosfar" time="2026-06-11T08:51:37Z">
         <changelog><![CDATA[v0.33 - Update description
 v0.32 - Add guard for mouse clicks during Program Output display mode
 v0.31 - Remove Active Angle from TCP param controls and revert env automation mode to default.
 v0.3 - Added JS API function check, and second run check, TCP param controls.
 v0.2 - Added SetupMulticamTrack() and SetupVideoProcessor() to automate project structuring.]]></changelog>
-        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/20623b8e6d023bc5e5c997890a77bf53e12e4038/multicam/atmosfar_Multicam%20Editor.lua</source>
-        <source type="data" file="atmosfar_multicam/multicam_video_processor.video_code">https://github.com/atmosfar/reaper_scripts/raw/20623b8e6d023bc5e5c997890a77bf53e12e4038/multicam/multicam_video_processor.video_code</source>
+        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/75bd16b82e463c4053656d2d6006d16673c7a1fb/Video/atmosfar_Multicam%20Editor.lua</source>
+        <source type="data" file="atmosfar_multicam/multicam_video_processor.video_code">https://github.com/atmosfar/reaper_scripts/raw/75bd16b82e463c4053656d2d6006d16673c7a1fb/Video/multicam_video_processor.video_code</source>
       </version>
     </reapack>
-  </category>
-  <category name="remux_video">
     <reapack name="atmosfar_Render Audio and Remux Video.lua" type="script" desc="atmosfar - Render audio and remux video">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
@@ -56,9 +35,9 @@ v0.2 - Added SetupMulticamTrack() and SetupVideoProcessor() to automate project 
         <link rel="website" href="https://forums.cockos.com/showthread.php?t=307612">Forum Thread</link>
         <link rel="website" href="https://github.com/atmosfar/reaper_scripts/tree/master/ffmpeg_remux">GitHub repository</link>
       </metadata>
-      <version name="1.0" author="atmosfar" time="2026-06-10T17:07:35Z">
+      <version name="1.0" author="atmosfar" time="2026-06-11T08:51:37Z">
         <changelog><![CDATA[v1.0 - Initial release]]></changelog>
-        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/e512b19360b052aceac3de39919c00f54ce01d93/remux_video/atmosfar_Render%20Audio%20and%20Remux%20Video.lua</source>
+        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/75bd16b82e463c4053656d2d6006d16673c7a1fb/Video/atmosfar_Render%20Audio%20and%20Remux%20Video.lua</source>
       </version>
     </reapack>
   </category>
