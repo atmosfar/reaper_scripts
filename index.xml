@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="atmosfar - Reaper Scripts" commit="75bd16b82e463c4053656d2d6006d16673c7a1fb">
+<index version="1" name="atmosfar - Reaper Scripts" commit="0924cb650c7505be0c61e7ec1e2bc900558bc0de">
   <category name="Video">
     <reapack name="atmosfar_Multicam Editor.lua" type="script" desc="atmosfar - Multicam editor">
       <metadata>
@@ -32,12 +32,17 @@ v0.2 - Added SetupMulticamTrack() and SetupVideoProcessor() to automate project 
 {\pard \ql \f0 \sa180 \li0 \fi0 A script which renders the current project as WAV, and remuxes it into a new video file with the video stream from the first video item found in the project, without re-encoding.\par}
 }
 ]]></description>
-        <link rel="website" href="https://forums.cockos.com/showthread.php?t=307612">Forum Thread</link>
-        <link rel="website" href="https://github.com/atmosfar/reaper_scripts/tree/master/ffmpeg_remux">GitHub repository</link>
+        <link rel="website" href="https://forums.cockos.com/showthread.php?t=309460">Forum Thread</link>
+        <link rel="website" href="https://github.com/atmosfar/reaper_scripts/tree/master/video">GitHub repository</link>
       </metadata>
       <version name="1.0" author="atmosfar" time="2026-06-11T08:51:37Z">
         <changelog><![CDATA[v1.0 - Initial release]]></changelog>
         <source main="main">https://github.com/atmosfar/reaper_scripts/raw/75bd16b82e463c4053656d2d6006d16673c7a1fb/Video/atmosfar_Render%20Audio%20and%20Remux%20Video.lua</source>
+      </version>
+      <version name="1.1" author="atmosfar" time="2026-06-11T09:06:19Z">
+        <changelog><![CDATA[v1.1 - Add render status check
+v1.0 - Initial release]]></changelog>
+        <source main="main">https://github.com/atmosfar/reaper_scripts/raw/0924cb650c7505be0c61e7ec1e2bc900558bc0de/Video/atmosfar_Render%20Audio%20and%20Remux%20Video.lua</source>
       </version>
     </reapack>
   </category>
