@@ -1,12 +1,13 @@
 -- @description atmosfar - Render audio and remux video
 -- @author atmosfar
--- @version 1.0
+-- @version 1.1
 -- @about
 --   A script which renders the current project as WAV, and remuxes it into a new video file with the video stream from the first video item found in the project, without re-encoding.
 -- @links
---  Forum Thread https://forums.cockos.com/showthread.php?t=307612
---  GitHub repository https://github.com/atmosfar/reaper_scripts/tree/master/ffmpeg_remux
+--  Forum Thread https://forums.cockos.com/showthread.php?t=309460
+--  GitHub repository https://github.com/atmosfar/reaper_scripts/tree/master/video
 -- @changelog
+--  v1.1 - Add render status check
 --  v1.0 - Initial release
 
 
@@ -152,6 +153,15 @@ reaper.GetSetProjectInfo_String(0, "RENDER_FORMAT", renderFormat, true)
 reaper.GetSetProjectInfo(0, "RENDER_SETTINGS", 0, true) -- Render full project via master
 
 reaper.Main_OnCommand(41824, 0)  -- Render project using latest settings
+
+-- Rendering full-speed offline pauses script execution, 
+-- but check render status in case it's idle rendering
+local function pollRender()
+   if reaper.EnumProjects(0x40000000) then
+       reaper.defer(pollRender)  -- still rendering, check again
+     end
+end
+reaper.defer(pollRender)
 
 -- Retrieve the output path of the WAV render
 local retval, wavPath = reaper.GetSetProjectInfo_String(0, "RENDER_TARGETS", "", false)
